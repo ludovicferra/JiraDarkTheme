@@ -1,15 +1,22 @@
-/* ==UserStyle==	
+/* ==UserStyle==
+@name         Jira Dark Gray
+@namespace    github.com/ludovicferra
+@version      1.0
+@license      BSD
+@author       @ludovicferra
+@preprocessor default
+Fork From :
 @name         Jira Dark Gray
 @namespace    github.com/aalvarado
 @version      1.13.3
 @license      BSD
 @author       @aalvarado
 @preprocessor default
-
 ==/UserStyle== */
 @-moz-document regexp(".*.atlassian.net/jira.*"),
 regexp(".*.atlassian.net/browse.*"),
-regexp(".*.atlassian.net/secure.*") {
+regexp(".*.atlassian.net/secure.*"),
+regexp(".*.atlassian.net/plugins.*") {
     header[role="banner"],
     [data-testid="Content"],
     html,
