@@ -15,8 +15,7 @@ Fork From :
 ==/UserStyle== */
 @-moz-document regexp(".*.atlassian.net/jira.*"),
 regexp(".*.atlassian.net/browse.*"),
-regexp(".*.atlassian.net/secure.*"),
-regexp(".*.atlassian.net/plugins.*") {
+regexp(".*.atlassian.net/secure.*") {
     header[role="banner"],
     [data-testid="Content"],
     html,
@@ -934,8 +933,52 @@ regexp(".*.atlassian.net/plugins.*") {
     }
 }
 
-
 @-moz-document regexp(".*.atlassian.net/issues.*") {
+    html,
+    body,
+    .navigator-body,
+    header[role="banner"] {
+        background-color: #333 !important;
+        color: #ccc !important;
+    }
+
+    nav ::after {
+        background: transparent !important;
+    }
+
+    a > * {
+        color: #8ec4fd !important;
+    }
+
+    nav,
+    .css-194d9bm {
+        background-color: #333 !important;
+        color: #ccc !important;
+    }
+    .css-1b03djw:hover {
+        background-color: #222 !important;
+    }
+
+    nav a,
+    nav a > *,
+    nav button,
+    nav button *,
+    svg,
+    svg path,
+    svg g,
+    svg * {
+        color: #8ec4fd !important;
+        fill: #8ec4fd !important;
+    }
+
+    nav button:hover,
+    nav button:active,
+    [aria-expanded="true"] {
+        background-color: #222 !important;
+    }
+}
+
+@-moz-document regexp(".*.atlassian.net/plugins/servlet/ac/io.tempo.jira/.*") {
     html,
     body,
     .navigator-body,
